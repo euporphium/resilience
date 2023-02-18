@@ -1,13 +1,16 @@
-import { Link } from "@remix-run/react";
-import TechStack from "~/components/TechStack";
+import { Link } from '@remix-run/react';
 
-import { useOptionalUser } from "~/utils";
+import { useOptionalUser } from '~/utils';
+
+import ColorSchemeToggle from '~/components/ColorSchemeToggle';
 
 export default function Index() {
   const user = useOptionalUser();
+
   return (
-    <main className="relative min-h-screen bg-white sm:flex sm:items-center sm:justify-center">
+    <main className="relative min-h-screen bg-white dark:bg-black sm:flex sm:items-center sm:justify-center">
       <div className="relative sm:pb-16 sm:pt-8">
+        <ColorSchemeToggle />
         <div className="mx-auto max-w-sm sm:flex sm:max-w-none sm:justify-center">
           {user ? (
             <Link
@@ -33,7 +36,6 @@ export default function Index() {
             </div>
           )}
         </div>
-        <TechStack />
       </div>
     </main>
   );
