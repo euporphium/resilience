@@ -14,10 +14,14 @@ import rootStylesheetUrl from './styles/root.css';
 
 import { getUser } from './session.server';
 
+const googleFontUrl =
+  'https://fonts.googleapis.com/css?family=Josefin+Slab:100,400|Patrick+Hand:400';
+
 export const links: LinksFunction = () => {
   return [
     { rel: 'stylesheet', href: tailwindStylesheetUrl },
     { rel: 'stylesheet', href: rootStylesheetUrl },
+    { rel: 'stylesheet', href: googleFontUrl },
   ];
 };
 
@@ -39,6 +43,7 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <script src="/color-scheme.js" />
       </head>
       <body className="h-full">
         <Outlet />
