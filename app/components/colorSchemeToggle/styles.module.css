@@ -1,0 +1,17 @@
+.toggle {
+  display: flex;
+  flex-direction: row;
+
+  border: 1px solid red;
+  background: green;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  color: green;
+  background: blue;
+}

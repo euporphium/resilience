@@ -2,7 +2,7 @@ import { Link } from '@remix-run/react';
 
 import { useOptionalUser } from '~/utils';
 
-import ColorSchemeToggle from '~/components/ColorSchemeToggle';
+import ColorSchemeToggle from '~/components/colorSchemeToggle';
 
 export default function Index() {
   const user = useOptionalUser();
